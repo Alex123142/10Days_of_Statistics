@@ -1,0 +1,16 @@
+def stdDev(arr):
+    mean = sum(arr)/len(arr)
+    s = 0
+    for i in range(len(arr)):
+        s += (arr[i]-mean)**2
+    std = (s/len(arr))**(1/2)
+    print(f'{std:.1f}')
+    
+    
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    vals = list(map(int, input().rstrip().split()))
+
+    stdDev(vals)
